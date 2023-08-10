@@ -1,0 +1,22 @@
+.box{
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+body {
+    height: 100vh;
+
+}
+
+.container-fluid{
+    background-image: url('../img/planet-1702788_1920.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+#result,
+.form-group{
+    color: #fff;
+
+}
