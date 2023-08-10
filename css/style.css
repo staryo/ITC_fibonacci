@@ -1,22 +1,42 @@
-.box{
+.box {
     background: transparent;
     backdrop-filter: blur(10px);
 }
 
 body {
     height: 100vh;
-
-}
-
-.container-fluid{
     background-image: url('../img/planet-1702788_1920.jpg');
     background-size: cover;
     background-position: center;
 
 }
 
+.container-fluid {
+
+}
+
 #result,
-.form-group{
+.form-group {
     color: #fff;
 
+}
+
+#inputNumber {
+    background: none;
+    color: #fff;
+    /*border: 1px solid;*/
+    outline: 0;
+    border-width: 0 0 2px 2px;
+    border-color: #fff;
+
+
+}
+
+#inputNumber::placeholder {
+    color: #fff;
+}
+
+#inputNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
