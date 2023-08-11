@@ -4,7 +4,11 @@ let cache = {1: 1, 2: 1}
 
 function readInput() {
     const number = inputNumber.value
-    resultValue.textContent = fibonacci(number)
+    let result = fibonacci(number)
+    if (result > 1_000_000) {
+        result = result.toExponential(4)    
+    }
+    resultValue.textContent = result
     inputNumber.value = number
 }
 
