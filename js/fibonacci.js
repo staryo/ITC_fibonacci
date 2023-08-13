@@ -6,11 +6,11 @@ function readInput() {
     const number = Number(inputNumber.value);
     if (!Number.isInteger(number)) {
         resultValue.textContent = 'Not an integer number';
-        return
+        return;
     }
     if (number <= 0) {
         resultValue.textContent = 'Not positive number';
-        return
+        return;
     }
     let result = fibonacci(number);
     if (result > 1_000_000) {
