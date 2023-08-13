@@ -12,7 +12,13 @@ function readInput() {
         publicResults('Not a positive number');
         return;
     }
-    let result = fibonacci(number);
+    let result;
+    try {
+        result = fibonacci(number);
+    } catch (RangeError) {
+        publicResults('Input number is too big');
+        return;
+    }
     if (result > 1_000_000) {
         result = result.toExponential(4);
     }
