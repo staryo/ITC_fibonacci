@@ -5,19 +5,30 @@ let cache = {1: 1, 2: 1};
 function readInput() {
     const number = Number(inputNumber.value);
     if (!Number.isInteger(number)) {
-        resultValue.textContent = 'Not an integer number';
+        publicResults('Not an integer number');
         return;
     }
     if (number <= 0) {
-        resultValue.textContent = 'Not positive number';
+        publicResults('Not a positive number');
         return;
     }
     let result = fibonacci(number);
     if (result > 1_000_000) {
         result = result.toExponential(4);
     }
-    resultValue.textContent = result;
-    inputNumber.value = number;
+    publicResults(result);
+}
+
+function publicResults(value) {
+    resultValue.classList.remove('fade-in');
+    resultValue.classList.add('fade-out');
+    setTimeout(() => {
+        resultValue.textContent = value;
+    }, 200);
+    setTimeout(() => {
+        resultValue.classList.remove('fade-out');
+        resultValue.classList.add('fade-in');
+    }, 200);
 }
 
 function fibonacci(number) {
