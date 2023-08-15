@@ -2,7 +2,7 @@ const inputNumber = document.getElementById('inputNumber');
 const resultValue = document.getElementById('result');
 let cache = {1: 1, 2: 1};
 
-function readInput() {
+function calculateResult() {
     const number = Number(inputNumber.value);
     if (!Number.isInteger(number)) {
         publicResults('Not an integer number');
@@ -47,4 +47,4 @@ function fibonacci(number) {
 }
 
 console.log(inputNumber.value);
-inputNumber.addEventListener('change', readInput);
+inputNumber.addEventListener('change', calculateResult);
