@@ -15,9 +15,14 @@
         <div class="col-12">
             <div class="p-3 rounded-2 shadow box border">
                 <div class="form-group row">
-                    <h2><label class="col-form-label" for="inputNumber">Input a number</label></h2>
+                    <h2>
+                        <label class="col-form-label" for="inputNumber">Input a number
+                        </label>
+                    </h2>
+
                     <div class="w-100">
-                        <input class="form-control form-control-lg text-center" id="inputNumber" placeholder="Number" type="number">
+                        <input class="form-control form-control-lg text-center" id="inputNumber" placeholder="Number"
+                               type="number">
                     </div>
                 </div>
             </div>
@@ -26,8 +31,12 @@
     <div class="row w-100 mt-5">
         <div class="col-12">
             <div class="p-3 rounded-2 box border">
-                <p class="h1 m-0 p-3 text-center fade-in" id="result">
-                    Calculate Fibonacci number</p>
+                <p class="h1 m-0 p-3 text-center text-white" id="result">
+                    <span class="text-white">Calculate Fibonacci number</span>
+                </p>
+                <p class="h1 m-0 p-3 text-center d-none" id="loader">
+                    <span class="spinner-border align-self-center text-white" role="status"></span>
+                </p>
             </div>
         </div>
     </div>
